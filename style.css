@@ -1,0 +1,57 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px red solid;
+}
+
+.info {
+    width: 40%;
+}
+
+
+/* Left side */
+.animated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 60%;
+    background: rgb(97,166,255);
+    background: linear-gradient(51deg, rgba(97,166,255,1) 10%, rgba(107,255,211,1) 99%);
+}
+
+/* Radar effect */
+.radar {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    overflow: hidden;
+}
+
+.radar img {
+    position: relative;
+    height: inherit;
+    top: 50%;
+    left: 50%;
+    opacity: .2;
+    transform-origin: 0% 0%;
+    animation: clockwise 5s linear infinite ;
+}
+
+
+
+@keyframes clockwise {
+    from { transform: rotate(0deg);     }
+    to   { transform: rotate(360deg);    }
+}
+
+
+/* Faded rings effect */
+
+
