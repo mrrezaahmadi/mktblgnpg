@@ -1,3 +1,48 @@
+@font-face {
+    font-family: Shabnam;
+    src: url('./Assets//Fonts/Shabnam.eot');
+    src: url('./Assets//Fonts/Shabnam.woff') format('woff'),
+         url('./Assets/Fonts/Shabnam.ttf') format('truetype');
+    font-weight: normal;
+}
+  
+@font-face {
+    font-family: Shabnam;
+    src: url('Shabnam-Bold.eot');
+    src: url('./Assets/Fonts/Shabnam-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+  
+  
+@font-face {
+    font-family: Shabnam;
+    src: url('Shabnam-Light.eot');
+    src: url('./Assets/Fonts/Shabnam-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url('Comfortaa-Regular');
+    src: url('./Assets/Fonts/Comfortaa-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url('Comfortaa-Bold.eot');
+    src: url('./Assets/Fonts/Comfortaa-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url('Comfortaa-Light.eot');
+    src: url('./Assets/Fonts/Comfortaa-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+
 body {
     height: 100vh;
     display: flex;
@@ -6,13 +51,10 @@ body {
     padding: 0;
 }
 
-div {
+/* div {
     border: 1px red solid;
-}
+} */
 
-.info {
-    width: 40%;
-}
 
 
 /* Left side */
@@ -99,5 +141,70 @@ div {
 
 .ring-1 {
     animation-delay: 1s;
+}
+
+
+/* RIGHT SIDE */    
+
+.info {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shabnam';
+    direction: rtl;
+}
+
+.route {
+    position: fixed;
+    top: 3rem;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(0, 136, 221);
+}
+
+.form {
+    width: 80%;
+}
+
+
+.button {
+    margin-top: 2rem;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-family: 'Shabnam';
+    background-color: #0093ED;
+    border-color: transparent;
+    border-radius: 3px;
+    height: 50px;
+}
+
+/* INput box */
+
+.input-box {
+    display: flex;
+    justify-content: flex-end;
+    color: #A0A0A0;
+}
+input {
+    padding-bottom: 10px;
+    font-family: 'Shabnam';
+    border: transparent;
+    background: transparent;
+    border-bottom: 1px #A0A0A0 solid;
+    display: flex;
+    align-self: center;
+}
+
+
+.input {
+    margin: 1rem 0;
+    width: 100%;
+}
+.icon {
+    position: absolute;
+    align-self: center;
+    font-size: 1.5rem !important;
 }
 
