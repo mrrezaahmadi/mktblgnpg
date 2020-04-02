@@ -44,12 +44,11 @@
 
 
 body {
-    height: 100vh;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     margin: 0;
-    padding: 0;
 }
+
 
 /* div {
     border: 1px red solid;
@@ -63,7 +62,8 @@ body {
     justify-content: center;
     align-items: center;
     height: inherit;
-    width: 52%;
+    width: 100vw;
+    height: 100vh;
     background: rgb(40,187,238);
     background: linear-gradient(51deg, rgba(40,187,238,1) 2%, rgba(152,240,218,1) 86%);
 }
@@ -147,7 +147,8 @@ body {
 /* RIGHT SIDE */    
 
 .info {
-    width: 48%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,12 +164,12 @@ body {
 }
 
 .form {
-    width: 60%;
-    height: 70%;
+    width: 80%;
+    height: 100vh;
     padding: 20px;
 }
 .form div {
-    margin: 30px 0;
+    margin: 5% ;
 }
 
 
@@ -225,4 +226,189 @@ input::placeholder {
     justify-self: center;
     font-family: 'Comfortaa';
     color: white;
+}
+
+
+@media screen and (min-width: 769px) { 
+    
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    
+    
+    /* Left side */
+    .animated {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        width: 52%;
+        background: rgb(40,187,238);
+        background: linear-gradient(51deg, rgba(40,187,238,1) 2%, rgba(152,240,218,1) 86%);
+    }
+    
+    /* Radar effect */
+    .radar {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        overflow: hidden;
+    }
+    
+    .radar img {
+        position: relative;
+        height: inherit;
+        top: 50%;
+        left: 50%;
+        opacity: .2;
+        transform-origin: 0% 0%;
+        animation: clockwise 5s linear infinite ;
+    }
+    
+    
+    
+    @keyframes clockwise {
+        from { transform: rotate(0deg);     }
+        to   { transform: rotate(360deg);    }
+    }
+    
+    
+    /* Faded rings effect */
+    
+    .fading-ring {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+    }
+    
+    .rings {
+        background-color: white;
+        border-radius: 50%;
+        border-color: transparent;
+        height: inherit;
+        width: 100%;
+        animation: pulse 3s linear infinite;
+        
+    }
+    
+    @keyframes pulse {
+        from {
+            transform: scale(0);
+            opacity: .2;
+        } to { 
+            transform: scale(1);
+            opacity: 0;
+        }
+    } 
+    
+    .ring-5 {
+        animation-delay: .2s;
+    }
+    
+    .ring-4 {
+        animation-delay: .4s;
+    }
+    
+    .ring-3 {
+        animation-delay: .6s;
+    }
+    
+    .ring-2 {
+        animation-delay: .8s;
+    }
+    
+    .ring-1 {
+        animation-delay: 1s;
+    }
+    
+    
+    /* RIGHT SIDE */    
+    
+    .info {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Shabnam';
+        direction: rtl;
+    }
+    
+    .route {
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(0, 136, 221);
+    }
+    
+    .form {
+        width: 60%;
+        height: 70%;
+        padding: 20px;
+    }
+    .form div {
+        margin: 30px 0;
+    }
+    
+    
+    .button {
+        box-shadow: 0 2px 2px 1px rgba(194, 194, 194, .8);
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-family: 'Shabnam';
+        background-color: #0093ED;
+        border-color: transparent;
+        border-radius: 8px;
+        height: 60px;
+    }
+    
+    /* INput box */
+    
+    .input-box {
+        display: flex;
+        justify-content: flex-end;
+        color: rgb(194, 194, 194);
+    }
+    input {
+        font-size: 18px;
+        padding-bottom: 10px;
+        font-family: 'Shabnam';
+        border: transparent;
+        background: transparent;
+        border-bottom: 1px rgb(194, 194, 194) solid;
+        display: flex;
+        align-self: center;
+    }
+    
+    input::placeholder {
+        color: rgb(194, 194, 194);
+    }
+    
+    
+    
+    .input {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    .icon {
+        position: absolute;
+        align-self: center;
+        font-size: 1.5rem !important;
+    }
+    
+    
+    .footer-message {
+        position: fixed;
+        align-self: flex-end;
+        justify-self: center;
+        font-family: 'Comfortaa';
+        color: white;
+    }
 }
