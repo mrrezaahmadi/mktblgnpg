@@ -63,9 +63,9 @@ body {
     justify-content: center;
     align-items: center;
     height: inherit;
-    width: 60%;
-    background: rgb(97,166,255);
-    background: linear-gradient(51deg, rgba(97,166,255,1) 10%, rgba(107,255,211,1) 99%);
+    width: 52%;
+    background: rgb(40,187,238);
+    background: linear-gradient(51deg, rgba(40,187,238,1) 2%, rgba(152,240,218,1) 86%);
 }
 
 /* Radar effect */
@@ -147,8 +147,9 @@ body {
 /* RIGHT SIDE */    
 
 .info {
-    width: 40%;
+    width: 48%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Shabnam';
@@ -156,28 +157,31 @@ body {
 }
 
 .route {
-    position: fixed;
-    top: 3rem;
     font-weight: bold;
     font-size: 20px;
     color: rgb(0, 136, 221);
 }
 
 .form {
-    width: 80%;
+    width: 60%;
+    height: 70%;
+    padding: 20px;
+}
+.form div {
+    margin: 30px 0;
 }
 
 
 .button {
-    margin-top: 2rem;
+    box-shadow: 0 2px 2px 1px rgba(194, 194, 194, .8);
     width: 100%;
     color: white;
     font-size: 20px;
     font-family: 'Shabnam';
     background-color: #0093ED;
     border-color: transparent;
-    border-radius: 3px;
-    height: 50px;
+    border-radius: 8px;
+    height: 60px;
 }
 
 /* INput box */
@@ -185,17 +189,23 @@ body {
 .input-box {
     display: flex;
     justify-content: flex-end;
-    color: #A0A0A0;
+    color: rgb(194, 194, 194);
 }
 input {
+    font-size: 18px;
     padding-bottom: 10px;
     font-family: 'Shabnam';
     border: transparent;
     background: transparent;
-    border-bottom: 1px #A0A0A0 solid;
+    border-bottom: 1px rgb(194, 194, 194) solid;
     display: flex;
     align-self: center;
 }
+
+input::placeholder {
+    color: rgb(194, 194, 194);
+}
+
 
 
 .input {
@@ -208,3 +218,11 @@ input {
     font-size: 1.5rem !important;
 }
 
+
+.footer-message {
+    position: fixed;
+    align-self: flex-end;
+    justify-self: center;
+    font-family: 'Comfortaa';
+    color: white;
+}
